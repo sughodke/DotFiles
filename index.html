@@ -1,0 +1,28 @@
+<html>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-62915331-1', 'auto');
+        ga('send', 'pageview');
+
+        function sub() {
+          var queryDict = { 'dimension5': "daretobegreat" }
+
+          ga('send', 'pageview', queryDict);
+          console.log(queryDict);
+        }
+        sub();
+    </script>
+<p>
+A fantastic example of when to use custom dimensions is if you had a content based site with many authors. As an analyst, you might want to understand which authors have the most popular content. To answer this question, you could view a report that compares pageviews by author. Although author data is not available by default in Google Analytics, you can send this data as a custom dimension with each pageview being tracked.
+
+The first step in the solution is to configure a new custom dimension in the management interface. The name should be author and the scope will be of type hit. Once configured, the new custom dimension will be assigned an index. For this example, let's say the index is 5.
+
+Now that the author custom dimension has been configured and assigned an index, it can be used with the analytics.js library to send author data as a custom dimension. For example, if your page is written in PHP, the actual author of the page will probably be stored in a PHP variable like $author. In your PHP template, you can use this author variable to pass the author value to the custom dimension:
+</p>
+  </body>
+</html>
